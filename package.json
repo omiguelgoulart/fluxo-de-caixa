@@ -2,7 +2,7 @@
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "final/",
+  "homepage": "/final/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
