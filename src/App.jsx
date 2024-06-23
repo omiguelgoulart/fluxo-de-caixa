@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <div className='bg-gray-900'>
-    <HashRouter basename='/fluxo-de-caixa'>
+    <HashRouter >
         <Sidebar />
         
         <Switch>
