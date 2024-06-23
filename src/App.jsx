@@ -9,11 +9,11 @@ function App() {
   return (
     <>
     <div className='bg-gray-900'>
-      <Router basename='/'>
+      <Router basename='/fluxo-de-caixa/'>
         <Sidebar />
         
         <Switch>
-          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/fluxo-de-caixa/" component={Dashboard} />
           <Route path="/receita" component={Receita} />
           <Route path="/saida" component={Saida} />
           <Route path="/dre" component={ConsultaDRE} />

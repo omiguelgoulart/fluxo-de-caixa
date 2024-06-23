@@ -53,7 +53,7 @@ function Sidebar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } lg:translate-x-0 lg:w-[4.7rem] lg:hover:w-40`}
       >
-        <Link exact to="/">
+        <Link exact to="/fluxo-de-caixa/">
           <button
             className="my-4 flex flex-col items-center p-2 rounded lg:hover:bg-gray-700 lg:transition-width lg:w-40"
             onClick={closeSidebar}
