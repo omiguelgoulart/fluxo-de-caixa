@@ -2,7 +2,7 @@
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://omiguelgoulart.github.io/final/",
+  "homepage": "https://omiguelgoulart.github.io/fluxo-de-caixa",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
