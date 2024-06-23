@@ -7,5 +7,15 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.display-none': {
+          display: 'none',
+        },
+      };
+      
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 }
