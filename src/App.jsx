@@ -3,13 +3,13 @@ import Dashboard from './components/Dashboard'
 import Receita  from './components/Receita'
 import Saida from './components/Saida'
 import Sidebar from './components/Sidebar'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <>
     <div className='bg-gray-900'>
-    <Router basename='/fluxo-de-caixa'>
+    <HashRouter basename='/fluxo-de-caixa'>
         <Sidebar />
         
         <Switch>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/dre" component={ConsultaDRE} />
         </Switch>
         
-      </Router>
+      </HashRouter>
     </div>
     </>
   )
