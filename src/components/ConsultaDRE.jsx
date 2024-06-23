@@ -44,6 +44,7 @@ const DRETable = () => {
               ))}
             </select>
           </div>
+          {/* Tabela de DRE */}
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="text-xs uppercase bg-gray-500 dark:bg-gray-800">
