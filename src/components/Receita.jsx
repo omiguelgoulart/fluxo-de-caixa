@@ -50,7 +50,7 @@ export function Receita() {
           <h1 className="text-2xl font-bold">Entradas</h1>
           <h2 className="text-2xl font-bold">Total {formatarDinheiro(total)}</h2>
         </header>
-        <div className="flex lg:flex-row lg:justify-between mt-4 flex-row sm:flex-col min-h-[calc(100vh-8rem)] ">
+        <div className="flex flex-col lg:flex-row lg:justify-between mb-4 min-h-[calc(100vh-8rem)]">
           {/* Menu de interações */}
           <div className="flex flex-col bg-gray-800 mt-5 p-4 rounded shadow lg:w-1/4  lg:right-0 ">
             <h1 className="text-2xl font-bold text-gray-400">Menu de interações</h1>
