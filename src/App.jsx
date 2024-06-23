@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <div className='bg-gray-900'>
-      <Router basename='/fluxo-de-caixa/'>
+      <Router basename='/'>
         <Sidebar />
         
         <Switch>
