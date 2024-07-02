@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -12,10 +13,15 @@ function Sidebar() {
     setIsOpen(false);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('authToken');
+    navigate('/login'); // Redireciona para a página de login após sair
+  };
+
   return (
     <div className="relative">
       {/* Header para telas pequenas e médias */}
-      <header className="bg-gray-800 text-white p-4 flex items-center justify-between lg:hidden">
+      <header className="bg-gray-800 text-white p-4 flex items-center justify-between w-full lg:hidden sm:w-full">
         <h1 className="text-lg font-bold">Menu</h1>
         <button
           onClick={toggleSidebar}
@@ -53,7 +59,7 @@ function Sidebar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } lg:translate-x-0 lg:w-[4.7rem] lg:hover:w-40`}
       >
-        <Link exact to="/">
+        <Link to="/">
           <button
             className="my-4 flex flex-col items-center p-2 rounded lg:hover:bg-gray-700 lg:transition-width lg:w-40"
             onClick={closeSidebar}
@@ -141,6 +147,26 @@ function Sidebar() {
             <span className="text-xs md:text-sm hidden md:block">DRE</span>
           </button>
         </Link>
+        <button
+          className="my-4 flex flex-col items-center p-2 rounded lg:hover:bg-gray-700 lg:transition-width lg:w-40"
+          onClick={handleLogout}
+        >
+          <svg
+            className="h-8 w-8 mb-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 12H3m12 0l-3 3m3-3l-3-3"
+            />
+          </svg>
+          <span className="text-xs md:text-sm hidden md:block">Sair</span>
+        </button>
       </nav>
     </div>
   );
