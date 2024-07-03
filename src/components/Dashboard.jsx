@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
@@ -137,22 +137,23 @@ function Dashboard() {
   return (
     <div className="bg-gray-900 text-white min-h-screen w-[94%] ">
       <div className="container mx-auto px-4 py-8">
-        <header className="bg-gray-800 p-4 rounded shadow flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-2xl font-bold">Dashboard do Restaurante</h1>
-            <p className="text-sm text-gray-400">{new Date().toLocaleDateString()}</p>
-          </div>
-          <div>
-            <label htmlFor="month" className="mr-2 text-gray-400">Selecione o Mês:</label>
-            <input
-              type="month"
-              id="month"
-              value={mesSelecionado}
-              onChange={handleMonthChange}
-              className="border p-2 rounded bg-gray-800 text-white"
-            />
-          </div>
-        </header>
+      <header className="bg-gray-800 p-4 rounded shadow flex flex-col md:flex-row justify-between items-center mb-8">
+  <div className="mb-4 md:mb-0">
+    <h1 className="text-2xl font-bold">Dashboard do Restaurante</h1>
+    <p className="text-sm text-gray-400">{new Date().toLocaleDateString()}</p>
+  </div>
+  <div>
+    <label htmlFor="month" className="mr-2 text-gray-400">Selecione o Mês:</label>
+    <input
+      type="month"
+      id="month"
+      value={mesSelecionado}
+      onChange={handleMonthChange}
+      className="border p-2 rounded bg-gray-800 text-white"
+    />
+  </div>
+</header>
+
         <main>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gray-800 p-4 rounded shadow">

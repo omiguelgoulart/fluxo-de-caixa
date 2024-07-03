@@ -21,7 +21,7 @@ function Sidebar() {
   return (
     <div className="relative">
       {/* Header para telas pequenas e médias */}
-      <header className="bg-gray-800 text-white p-4 flex items-center justify-between w-full lg:hidden sm:w-full">
+      <header className="bg-gray-800 text-white p-4 flex items-center justify-between w-full lg:hidden ">
         <h1 className="text-lg font-bold">Menu</h1>
         <button
           onClick={toggleSidebar}

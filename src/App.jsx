@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="bg-gray-900 min-h-screen text-white flex">
       <HashRouter>
-        <div className="flex-grow p-6">
+        <div className="flex-grow ">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} /> {/* Adicionar rota para o registro */}
