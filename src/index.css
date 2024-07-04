@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* scrollbar.css */
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px; /* largura da barra de rolagem */
+  }
+  
+  /* Estilizando o rastreamento (trilha) da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* cor de fundo da trilha */
+  }
+  
+  /* Estilizando o polegar (thumb) da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* cor do polegar */
+    border-radius: 4px; /* borda arredondada do polegar */
+  }
+  
+  /* Opcional: aumentar a visibilidade da barra de rolagem apenas quando estiver em hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor do polegar ao passar o mouse */
+  }
+  

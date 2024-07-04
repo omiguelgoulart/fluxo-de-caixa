@@ -170,14 +170,14 @@ function Dashboard() {
             </div>
           </div>
           <div className="mt-8 bg-gray-800 p-4 rounded shadow">
-            <h2 className="text-xl font-semibold mb-4">Indicadores de Desempenho</h2>
+            <h2 className="text-xl font-semibold mb-4 bg-gray-800 p-4 rounded shadow">Indicadores de Desempenho</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <h3 className="text-lg font-semibold">Ticket Médio</h3>
                 <p className="text-2xl font-bold">{formatarDinheiro(ticketMedio)}</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Margem de Contribuição</h3>
+                <h3 className="text-lg font-semibold ">Margem de Contribuição</h3>
                 <p className={`text-2xl font-bold ${margemContribuicao >= 0 ? 'text-green-500' : 'text-red-500'}`}>{formatarDinheiro(margemContribuicao)}</p>
               </div>
             </div>
